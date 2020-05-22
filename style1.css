@@ -1,13 +1,15 @@
 html {
-    background: #300B3D;
+    background: purple;
 }
 
 body {
-    background: #B9ADF7;    
+    background: #CCAAFF;  
     font-family: "Trebuchet MS", Helvetica, Arial, sans-serif; 
     font-size: 18px;
     line-height: normal;
-    margin: 1em;
+    margin: auto;
+    margin-top: 1em;
+    width: 80%;
 
 }
 
@@ -16,10 +18,10 @@ nav {
     margin: 10px;
     padding: 0;
     background-color: #300B3D;
-    width: 18%;
+    width: 15%;
     position: fixed;
-    float: left;
     text-align: center;
+    font-size: 16px;
 }
 
 nav a{
@@ -30,14 +32,13 @@ nav a{
 }
 
 nav a:hover {
-    background-color: #C1BCDE;
+    background-color: #CCAAFF;
     color: black;
 }
 
 .Header, .Content {
     margin-left: 20%;
     padding: 1em;
-
 }
 
 
@@ -46,7 +47,7 @@ footer {
     font-family: serif;
     font-size: 0.7em;
     color: white;
-    padding: inherit;
-    background: #300B3D;
+    padding: 1em;
+    background: purple;
     text-align: right;
 }
