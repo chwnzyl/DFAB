@@ -49,3 +49,35 @@ footer {
     background: purple;
     text-align: right;
 }
+
+.slideshow-container {
+    box-sizing: border-box;
+    max-width: 800px;
+    position: relative;
+}
+
+.slideshow1, .slideshow2 {display: none}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    user-select: none;    
+}
+
+.next {right: 0}
+
+.prev:hover, .next:hover {background-color: rgba(0,0,0,0.8)}
+
+.text {
+    color: ghostwhite;
+    font-size: 14px;
+    padding: 12px;
+    position: absolute;
+    bottom: 4px;
+    width: auto;
+    background-color: rgba(0,0,0,0.6);
+}

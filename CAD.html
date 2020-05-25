@@ -23,51 +23,76 @@
                 <p>For simple image editing, I like to use the software installed in my computer, i.e. Microsoft Paint and Paint 3D. The purpose is usually to crop faces or objects, integrating them into a bigger picture, and touching up using the brushes to make them more natural. Here is an example from last year:</p>
                     <p><img src="image/CAD_images/raster_edit.jpg" width="100%"/></p>
                 <p>GIMP is introduced to me in DFAB. It is also an image editor, but with a plethora of features such as layers, blur background, lock position… and many more! I get to make use of the layers to shift my elements around anytime, unlike in Microsoft Paint when the object is fixed once I click elsewhere. This is how I make a dog appear to be moving from behind a plunge board using GIMP:</p>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_final.png" width=70%/>
+                
+            <div class="slideshow-container">
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_final.jpg" width=800px/>
                 <div class="text">Peek-a-boo! Click on the arrows to view the process.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_1.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_1.png" width=800px/>
                 <div class="text">I took an image of a dog from clipart-library.com.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_2.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_2.png" width=800px/>
                 <div class="text">Resized it using <i>Scale Layer</i>.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_3.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_3.png" width=800px/>
                 <div class="text">Opened an image in my gallery as another layer. <br>Rescaled layer and clicked on “Fit Canvas to Layers” under <i>Image</i>.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_4.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_4.png" width=800px/>
                 <div class="text">Cropped out the plunge board using <i>Free Select Tool</i>. Then I copied and pasted it.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_5.png" width=70%/>
-                <div class="text">Added a <i>New Layer</i> and anchored the pasted image on it. With the dog image sandwiched between the 2 layers, the dog is now seen “hiding” behind the plunge board.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_6.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_5.png" width=800px/>
+                <div class="text">Added a <i>New Layer</i> and anchored the pasted image on it. <br>With the dog image sandwiched between the 2 layers, the dog is now seen “hiding” behind the plunge board.</div>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_6.png" width=800px/>
                 <div class="text">I can now move the dog as if it walked on water, using <i>Move Tool</i>.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_7.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_7.png" width=800px/>
                 <div class="text">Made the background blur to focus on the dog, using <i>Linear Motion Blur</i>.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_8.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_8.png" width=800px/>
                 <div class="text">Using <i>Rectangle Select Tool</i>, I selected the area which I want to save, and clicked <i>Fit Canvas to Selection</i> under <i>Image</i>.</div>
-                </div>
-            <div class="image slideshow">
-                <img src="image/CAD_images/gimp_9.png" width=70%/>
+                    </div>
+                <div class="slideshow1">
+                <img src="image/CAD_images/gimp_9.png" width=800px/>
                 <div class="text">Lastly, I exported my work as “.png”</div>
-                </div>
+                    </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
                 
             <h3>2D vector - Inkscape</h3>
             <h3>3D - Fusion 360</h3>
         </div>
 
+        <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshow1");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+    
+  slides[slideIndex-1].style.display = "block";
+}
+        </script>
     </body>
     <footer>Cheryl Ng &copy; 2020</footer>
 
