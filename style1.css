@@ -9,7 +9,7 @@ body {
     line-height: normal;
     margin: auto;
     margin-top: 1em;
-    width: 80%;
+    max-width: 80%;
 
 }
 
@@ -52,9 +52,11 @@ footer {
 
 .slideshow-container {
     box-sizing: border-box;
-    max-width: 800px;
+    max-width: 900px;
     position: relative;
 }
+
+.slideshow-container img {max-width: 100%}
 
 .slideshow1, .slideshow2 {display: none}
 
@@ -78,6 +80,5 @@ footer {
     padding: 12px;
     position: absolute;
     bottom: 4px;
-    width: auto;
     background-color: rgba(0,0,0,0.6);
 }
