@@ -38,8 +38,11 @@ nav a:hover {
 
 .Header, .Content {
     margin-left: 20%;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
+
+.Header {padding-top: 6px}
 
 footer {
     font-family: serif;
