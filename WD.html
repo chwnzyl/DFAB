@@ -19,8 +19,8 @@
             <h1>Introduction to DFAB</h1>
         </div>
         <div class="Content">    
-            <h3>Web Development</h3>
-            <p>These are the videos and articles to help me build this journal webpage:</p>
+            <h2>Web Development</h2>
+            These are the videos and articles to help me build this journal webpage:
             <ul>
                 <li><a href="https://www.w3schools.com/html/"> W3Schools </a></li>
                 <li><a href="https://blog.hubspot.com/marketing/web-design-html-css-javascript">Web Design 101</a></li>
@@ -29,8 +29,32 @@
                 <li><a href="https://www.youtube.com/watch?v=0afZj1G0BIE">Learn CSS in 12 Min</a></li>
                 <li><a href="https://www.youtube.com/watch?v=1PnVor36_40">Learn CSS in 20 Min</a></li>
             </ul>
+            <h3>HTML Basics</h3>
+            <p>HTML stands for Hyper Text Markup Language. It describes a structure of a webpage. All of my documentation is saved as .html files and edited using Brackets. Let's begin with some of the basic structure in an HTML document. </p>
+                <ol>
+                    <li>The angle brackets, &lt;&gt;, are used to enclose a code. Anything that goes in between the angle brackets codes for a property or an expression. Together, these 2 form a <b>tag</b>.</li>
+                    <li>At the start of an HTML document, <code>&lt;!DOCTYPE html'&gt;</code> declares that the document is a HTML, for the browser to read and run the page.</li>
+                    <li>An HTML <b>element</b> tells a browser how to display a content. It is defined by a start tag, some content, and an end tag (w3schools). <br><i>E.g. &lt;tagname&gt;---Content---&lt;/tagname&gt; </i></li>
+                    <li><b>Attributes</b> provide additional information about the element, such as <code>href</code>, <code>src</code>, <code>width</code>, and <code>style</code>. Some examples are displayed in the image below.</li>
+                    <li>'class' attribute marks an element for styling and can be used repeatedly in a document., whereas 'id' attribute is unique and can only be used within the page once.</li>
+                    <li>The image below shows more HTML elements and properties. (Click to enlarge) </li>
+                </ol>
+                    <a href="image/demo.png"><img src="image/demo.png" width=100%></a>
+                
+            <h3>CSS Basics</h3>
+            <p>CSS stands for Cascading Style Sheets. It describes how HTML elements should be displayed, and can be used repeatedly in multiple webpages. Here is an example, taken from my website stylesheet. </p>
+            <a href="image/css_example.png"><img src="image/css_example.png" width="70%"></a>
+            <p>What are the basics of CSS? Let's take a look.</p>
+                <ol>
+                    <li><b>Syntax:</b> A CSS rule consists of a selector, a pair of curly brackets, property and value declaration separated by a colon, and a semicolon to separate multiple declarations. <br>
+                        &#8658; <code>p {color:blue; text-align:center}</code></li>
+                    <li><b>Simple Selectors:</b> If an element is selected, the name can be written on its own. If a class is selected, a period '.' will be written before the class name. If an ID is selected, a hash '#' will be written instead. <br>&#8658; <code>body{</code> , <code> .Header{</code> , <code> #slide1{</code></li>
+                    <li><b>Combinator Selectors:</b> Different selectors are combined together to make the selection more specific. To specify what an element must have, selectors are placed side by side without spacing. <br>&#8658; <code>div.Content{</code><br>To use multiple selectors to specify an ancestor of an element, a space is added. <br>&#8658; <code>nav a{</code><br>To give the same properties to multiple selectors, a comma is used.<br>&#8658; <code>ul, .names, #mywork{</code></li>
+                    <li><b>How to input CSS:</b> It can be added inline with HTML elements. &#8658; <code>&lt;p style=color:"red"&gt;</code><br>It can be added as a element in the head if an HTML document. &#8658; <code>&lt;style&gt; h1{padding:0} &lt;/style&gt;</code><br>However, the 2 methods above can only be used once in an element or one HTML page. It will be very tedious to rewrite the same styles many times. Furthermore, HTML is meant to contain the structure of a webpage and not styling the content. Hence it is recommended to store as an external CSS file and attach it in an HTML document. &#8658; <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+                </ol>
+            
             <h3>Version Control</h3>
-            <p>These websites and videos aid in creating my Git repository, which essentially lead to publishing my website.</p>
+            These websites and videos aid in creating my Git repository, which essentially lead to publishing my website.
             <ul>
                 <li><a href="https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/">What is Git</a></li>
                 <li><a href="https://www.youtube.com/watch?v=USjZcfj8yxE">Learn Git in 15 min</a></li>
