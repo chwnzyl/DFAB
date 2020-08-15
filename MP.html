@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style1.css"/>
+    <head>
+        <title>Module Project</title>
+    </head>
+    <body>
+        <nav>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="FS.html">Fablab Safety</a></li>
+            <li><a href="WD.html">Web Development</a></li>
+            <li><a href="CAD.html">Computer Aided Design</a></li>
+            <li><a href="EP.html">Embedded Programming</a></li>
+            <li><a href="CCC.html">Computer Controlled Cutting</a></li>
+            <li><a href="3D.html">3D Printing</a></li>
+            <li><a href="MP.html">Module Project</a></li>                
+        </nav>
+        <div class="Header">
+            <h1>Module Project: SAVEnding</h1>
+            <h2>Background</h2>
+            <p>Since young I have always wanted to build a machine that “eats up” money and “spits out” candies or biscuits. Something like a vending machine, but without electricity. I thought of making the whole thing entirely out of recyclables such as cardboard and skewers, however it is not as easy as it seems. Due to the lack of resources (strong glue, nails, workspace) and time, I could not build one. Now that I have the opportunity to craft something as the Final Project in DFAB, I am going to work on it, adding on with the application of Arduino.</p>
+            
+            <h2>Project Idea</h2>
+            <p><i><b>Name:</b> SAVEnding</i></p>
+            <p><i><b>Object:</b> A vending machine with embedded programming using Arduino</i></p>
+            <p><i><b>Function:</b> Dispense items upon inserting coin and pushing one button</i></p>
+            <p><i><b>Purpose:</b> To encourage a habit of saving since young, especially if the person tends to overspend</i></p>
+            <p>My project will be named SAVEnding because it serves as a vending machine miniature and a coin saving box. My plan is whenever I insert a coin, I can press a button that links to a choice of item that I want, then seeing the item drop. The items which are placed in the dispensing columns must be useful and should ideally be free or cheaper than the value of the money deposited, so that I am more willing to save every time. I want to design a small, simple and portable machine that can function 24/7.</p>
+            <p>Below shows a sketch of how SAVEnding should work (drawing done using Google Drawing):</p>
+            <img src="image/Project/idea_sketch.png" width="100%">
+            
+            <h2>Design Inspiration</h2>
+            <p>After searching up for “vending machines using Arduino”, I have come across one that fits my idea. I downloaded the 3D sketch from the website for reference. That design looks complicated at first, but after removing the rail system (which takes up a large part of the building process), it looks much easier to recreate. Picture on the left shows the original project, picture on the right shows my modified version after hiding the rail system parts. </p>
+            <p><a href="image/Project/HTM.jpg" width="54%"><img src="image/Project/HTM.jpg" width="53%"></a>
+            <a href="image/Project/simplified_design.png"><img src="image/Project/simplified_design.png" width="45%"></a>
+            <i>(Source: <a href="https://howtomechatronics.com/projects/diy-vending-machine-arduino-based-mechatronics-project/">https://howtomechatronics.com/projects/diy-vending-machine-arduino-based-mechatronics-project/</a></i>)
+            </p>
+            
+            <h2>Bill of Materials</h2>
+            <ul>
+                <li>1 x Arduino Board</li>
+                <li>1 x LCD</li>
+                <li>2 x Servo Motor</li>
+                <li>1 x Proximity Sensor</li>
+                <li>4 Push Buttons</li>
+                <li>Wires (type: tbc)</li>
+                <li>4mm Plywood</li>
+                <li>2mm Acrylic (162mm x 172mm)</li>
+                <li>Thick Metal wire (to make helical coil)</li>
+            </ul>
+            
+            <h2>Laser cutting</h2>
+            <p>I used Autodesk Fusion 360 to sketch out the board pieces required for SAVEnding structure.></p>
+            <p>(updates will be here later)</p>
+            
+            <h3>Troubleshooting</h3>
+            <p>I set my ‘thickness’ parameter to be 5mm and after I was advised to use 4mm plywood, I changed the thickness to 4mm. But many problems arouse, such as missing parts, cutting problems, incomplete cuts. (see image below) </p>
+            <p><img src="image/Project/problem.png" width="100%"></p>
+            <p>To solve these issues, I did the following: </p>
+                <ol>
+                    <li>I realised my ‘finger height’ parameter is still at 5mm, so I set it to ‘Thickness’. 2 problems remained, and they were resulted from the 2 pieces inside the box.</li>
+                    <li>I dragged the history marker to and fro about the point of time where the mistake could have happened, and found that the length of the pieces is still “Base-10” while the finger height changed. When I edited the length to “Base-12”, somehow the cutting of the left and right walls is misaligned, so I just extended the finger instead of increasing the length of piece.</li>
+                    <li>There was another problem that caused the front wall to be partially cut. It is after I clicked to edit a sketch at the front that I realised the wall thickness was set of ‘5mm’ instead of ‘Thickness’. </li>
+                </ol>
+            <p>So after making some adjustments, the problem is finally solved and I am able to cut 4mm plywood!</p>
+            
+        </div>
+        <div class="Content">    
+            
+        </div>
+    </body>
+    <footer>Cheryl Ng &copy; 2020</footer>
+
+</html>
