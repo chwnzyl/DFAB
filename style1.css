@@ -58,6 +58,8 @@ li {
     padding-bottom: 0.2em;
 }
 
+img {width: 100%}
+
 .slideshow-container {
     box-sizing: border-box;
     max-width: 900px;
