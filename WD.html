@@ -16,10 +16,9 @@
             <li><a href="MP.html">Module Project</a></li>                
         </nav>
         <div class="Header">
-            <h1>Introduction to DFAB</h1>
+            <h1>Web Development</h1>
         </div>
         <div class="Content">    
-            <h2>Web Development</h2>
             These are the videos and articles to help me build this journal webpage:
             <ul>
                 <li><a href="https://www.w3schools.com/html/"> W3Schools </a></li>
@@ -29,7 +28,7 @@
                 <li><a href="https://www.youtube.com/watch?v=0afZj1G0BIE">Learn CSS in 12 Min</a></li>
                 <li><a href="https://www.youtube.com/watch?v=1PnVor36_40">Learn CSS in 20 Min</a></li>
             </ul>
-            <h3>HTML Basics</h3>
+            <h2>HTML Basics</h2>
             <p>HTML stands for Hyper Text Markup Language. It describes a structure of a webpage. All of my documentation is saved as .html files and edited using Brackets. Let's begin with some of the basic structure in an HTML document. </p>
                 <ol>
                     <li>The angle brackets, &lt;&gt;, are used to enclose a code. Anything that goes in between the angle brackets codes for a property or an expression. Together, these 2 form a <b>tag</b>.</li>
@@ -41,7 +40,7 @@
                 </ol>
                     <a href="image/demo.png"><img src="image/demo.png" width=100%></a>
                 
-            <h3>CSS Basics</h3>
+            <h2>CSS Basics</h2>
             <p>CSS stands for Cascading Style Sheets. It describes how HTML elements should be displayed, and can be used repeatedly in multiple webpages. Here is an example, taken from my website stylesheet. </p>
             <a href="image/css_example.png"><img src="image/css_example.png" width="90%"></a>
             <p>What are the basics of CSS? Let's take a look.</p>
@@ -53,8 +52,9 @@
                     <li><b>How to input CSS:</b> It can be added inline with HTML elements. &#8658; <code>&lt;p style=color:"red"&gt;</code><br>It can be added as a element in the head if an HTML document. &#8658; <code>&lt;style&gt; h1{padding:0} &lt;/style&gt;</code><br>However, the 2 methods above can only be used once in an element or one HTML page. It will be very tedious to rewrite the same styles many times. Furthermore, HTML is meant to contain the structure of a webpage and not styling the content. Hence it is recommended to store as an external CSS file and attach it in an HTML document. &#8658; <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
                 </ol>
             
-            <h3>Version Control</h3>
-            These websites and videos aid in creating my Git repository, which essentially lead to publishing my website.
+            <h2>Version Control</h2>
+            <p>Version control is a system that records changes to a file or set of files over time so that specific versions can be recalled  later on. This is especially important for web designers to keep track of each changes made, as well as preserving older versions which may be needed along the way. Version control allows me to revert selected files back to a previous state, revert the entire project back to a previous state, compare changes over time, see who last modified something that might be causing a problem (for multiple collaborators), and more. In this way, recovery is made easy with version control even if I messed up or lose my files.</p>
+            <p>These websites and videos aid in creating my Git repository, which essentially lead to publishing my website.</p>
             <ul>
                 <li><a href="https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/">What is Git</a></li>
                 <li><a href="https://www.youtube.com/watch?v=USjZcfj8yxE">Learn Git in 15 min</a></li>
@@ -62,7 +62,22 @@
                 <li><a href="https://help.github.com/en/github/getting-started-with-github/create-a-repo">Creating a repository on GitHub</a></li>
                 <li><a href="https://www.youtube.com/watch?v=nhNq2kIvi9s">Learn GitHub in 20 Minutes</a></li>
             </ul>
-            <p>Then I realised using <u>Github Desktop </u> is more convenient as I can just commit changes to master and push origin within a few clicks. I can also monitor all the changes at one glance, compared to Git.</p>
+             
+            <h3>Getting started with Git</h3>
+            <p>After I installed <a href="https://git-scm.com/downloads">Git</a> on my Desktop, I launched Git Bash and created my username using <code>$ git config --global user.name</code>. To create a repository using the folder "DFAB" I have in my desktop, I first find the address of the folder and paste it in Git, then initialise a repository in that directory: </p>
+            <p>
+            <code>$ cd C:/Users/chwnzyl02/Desktop/DFAB</code>
+            <br><code>$ git init</code>
+            </p>
+            <p>I can check the status of my files using <code>$ git status</code>. All the files within my folder were listed as 'Untracked files'. To add the files that I need into my repository, I used <code>$ git add &lt;file&gt;</code> (after which they will be listed under "Changes to be committed"), then I add these files into my master branch using <code>$ git commit</code>. I will have to write a message for every commit I made, using the <code>-m</code> flag. Commit messages will come in handy when I need to recall any version in the future. Finally, I will publish the commits onto my website with <code>$ git push origin master</code>.</p>
+            <p>As the time went by, I will make changes to some files, create new files, or remove some in the folder, I will have to update my master branch, then commit again. <code>$ git add &lt;file&gt;</code> adds the new/modified file into the staging area, while <code>$ git rm &lt;file&gt;</code> removes the file from the staging area. To view commit history, enter <code>$ git log</code>. By default, with no arguments, 'git log' lists the commits made in that repository in reverse chronological order; i.e. the most recent commits show up first. It is a good habit to commit changes frequently, instead of making changes to many files at once then commit, as it will be a headache to redo from the last commit if something goes wrong.</p>
+            <p>There are many more things about Git and these sums up how I created a repository and continue my documentation. The links above contains more information, should you wish to explore more about Git.</p>
+            
+            <h3>Transiting to Github Desktop</h3>
+            <p>Initially I didn't want to use Github Desktop fearing that it will take up a lot of storage. However, I realised using Github Desktop is more convenient as I can just commit changes to master and push origin within a few clicks. I can also monitor all the changes at one glance, compared to Git.</p>
+            
+            <p>Comparision between Git and Github Desktop:</p>
+            <p><img src="image/WD/Version_control.png" width="100%"></p>
         </div>
     </body>
     <footer>Cheryl Ng &copy; 2020</footer>
