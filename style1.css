@@ -95,3 +95,10 @@ code {
     color: #424242;
     background-color: #e6ccff;
 }
+
+table {
+    text-align: left;
+    border-spacing: 1px;
+}
+
+th, td {padding: 10px}
