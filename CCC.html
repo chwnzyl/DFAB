@@ -2,7 +2,7 @@
 <html>
     <link rel="stylesheet" href="style1.css"/>
     <head>
-        <title>Introduction to DFAB</title>
+        <title>Computer Controlled Cutting</title>
     </head>
     <body>
         <nav>
@@ -16,11 +16,69 @@
             <li><a href="MP.html">Module Project</a></li>               
         </nav>
         <div class="Header">
-            <h1>Computer Controlled Cutting</h1>
+            <h1>Laser Cutting &amp; Engraving</h1>
         </div>
-        <div class="Content">    
+        <div class="Content">
+            <h2>Principles</h2>
+            <h3>Introduction</h3>
+            <p>The word "laser" in laser cutting stands for Light Amplification by Stimulated Emission of Radiation. A powerful laser beam is the source that melts, burns, or vaporizes the material. Optics such as mirror and lens help in focusing the laser beam onto material surface.</p>
+            <p>This non-contact, thermal-based fabrication process is ideal for several materials, including wood, glass, paper, metal, plastic, and gemstone. It’s also capable of producing intricate parts without needing a custom-designed tool.</p>
+            <p>Electronically controlled motors move the laser head to cut or engrave the desired shape into the material of the workpiece.  The assist gas is from the compressor. Blowing compressed air at the area being laser cut helps prevent flare ups and keeps things clean by directing vaporized material downward and away from the cut, and away from the machine’s lenses and mirrors.</p>
+            
+            <h3>Laser cutter system</h3>
+            <ol>This also serves as a guide for the order of equipments to switch on.
+                <li><b>Computer:</b> Instructions are sent from here to the laser cutter. (usually a software is required)</li>
+                <li><b>Laser cutters:</b> This machine receives instruction from the PC to cut the designs.</li>
+                <li><b>Smoke/Fume Extractor:</b> A safety equipment to prevent accumulation of smoke and gases in the laser cutter. The contaminated air passes through the Carbon and HEPA filter to remove unpleasant odours and microparticles.</li>
+                <li><b>Air compressor:</b> A safety equipment that acts as air assist to blow the laser path clear of smoke and debris.</li>
+            </ol>
+            <p>Laser cutters in SP:</p>
+            <p><img src="image/CCC/SP-lasercutters.png" width="100%"> </p>
+            <p>The <u>approved</u> materials are paper, cardboard, plywood and acrylic, no thicker than 5mm. The <u>prohibited</u> materials are PVC, metal, foam and rubber.</p>
+            
+            <h3>Designing - Use of software</h3>
+            <p>It is strongly encouraged for us to draw out our designs and layout nicely before going to the laser cutter as we need to be time efficient and planning can help save resources. We also need to learn a bit of how the settings of each laser cutter's control panel works.</p>
+            <p>Some files that are accepted by Corel Draw (the software that links to the laser cutter settings): DXF, PDF, PNG, JPG. To know which file format to work on for cutting and engraving, we need to recall the difference between <b>vector and rastor</b>. (Refer to <a href="CAD.html">Computer Aided Design</a>)</p>
+            <p><img src="image/CCC/vector-vs-raster.png" width="100%"> </p>
+            <p>Next, decide whether you want to vector cut, vector engraving (scoring), or raster engraving. Set the colours to be RGB when porting into Corel Draw, then adjust the line weight accordingly.</p>
+            <p><img src="image/CCC/types-of-cut.png" width="100%"> </p>
+            <h3>Software Controllers CorelDraw</h3>
+            <p>After importing/opening files into CorelDraw, we should adjust the line weight and Fill. The explanation of laser cutter controllers will not be explained here.</p>
+            <p><img src="image/CCC/coreldraw.png" width="100%"> </p>
+            
+            <h3><u>Factors to consider</u></h3>
+            <p><b>Chamfers and joints</b> - A chamfer is a corner beveled at a 45-degree angle and is created by placing a three-cornered piece of material at a 90&deg; joint, mainly to provide reinforcement especially if the model is large. A chamfer can also mean rounding an edge to reduce the sharpness. Creating t-slot joints allows pieces to interlock and secure in place without the need to weld or attach joints using other methods. Once in place, fasteners, nuts, locks and other items are then used to hold the pieces together. When designing, chamfers and joints can be considered.</p>
+            <p><b>Kerf</b> - The laser burns away a portion of material when it cuts through. This is known as the laser kerf and ranges from 0.08mm – 1mm depending on the material type and other conditional factors. Besides the material properties and thickness, the focal length of the lens and pressure of compressed air have an impact too. We should take kerf into consideration if we need fine details or making press fit models. To do so, we will add (for protruding parts) or substract (for holes/inward surfaces) the kerf width from our component dimensions.</p>
+            <p><b>Parametric design</b> - As mentioned in previous page briefly, parameters are used to make structures of the same features but different thickness, length or height. With just 1 change to one parameter, all the other dimensions be adjusted accordingly. That saves a lot of time to redesign again.</p>
+            <p><img src="image/CCC/chamfer.png" width="55%"> <img src="image/CCC/Kerf.png" width="43%"> <img src="image/CCC/chamfer-2.png" width="55%"> <img src="image/CCC/parametric.png" width="43%"> </p>
+            
+            <h3>Things to take note:</h3>
+            <ul>
+                <li>Ensure that the compressed air and exhaust are turned on.</li>
+                <li>After cutting, the enclosure lid must be remain closed for at least 30 - 40 seconds to allow for smoke and fumes to be exhausted.</li>
+                <li>Always watch the whole cutting process in case there might be fire break outs.</li>
+                <li>Keep the work area clean of unwanted materials and debris. A buildup of cutting and engraving residue and debris is dangerous and can create a fire hazard. </li>
+                <li>If laser cannot cut through the material despite increasing the power by 5%, the lens could be dirty. Notify the staff instead of continuing as it may cause damage to the lens.</li>
+            </ul>
+            <p><i>Source: FABLAB@SP (Blackboard)</i></p>
+            
+            <h2>Hands-on in School &amp; Assignment</h2>
+            <p>When we went to school on 26 June, we are given the opportunity to cut out 2mm &times; 2mm squares from a recycled 3mm plywood. The main purpose was to perform test cuts using different speed and power of the laser cutter (Epilog @ T11C). The inital speed is set high and power is set low. As the speed is decreased and/or the power is increased, the cut is made deeper. We also measured the squares using a vernier caliper to determine the kerf, which was about 0.2mm. I took a picture of a press-fit box done by Mr Dorville for the previous class.</p>
+            <p><img src="image/CCC/test-cut.jpg" width="49%"> <img src="image/CCC/press-fit.jpg" width="49%"> </p>
+            <p>For assignment, my press-fit design is in both <a href="CAD.html">Computer Aided Design</a> and <a href="MP.html">Module Project</a>. Here's my design done using Fusion 360, as well as the layout of the .DXF sketches done using Inkscape, which I then sent to the laser cutter to cut. </p>
+            <table>
+                <tr>
+                    <td>Parameters:<img src="image/Project/parameters.png" width="500"></td>
+                    <td>Design:<img src="image/CCC/SAVEnding_svg.svg" width="400" style="background: white"> </td>
+                </tr>
+                <tr>
+                    <td>Assembly:<img src="image/CCC/box.png" width="500"></td>
+                    <td>Laser cutting:<img src="image/CCC/cut.png" width="400"> </td>
+                </tr>
+            </table>
             
         </div>
+        
     </body>
     <footer>Cheryl Ng &copy; 2020</footer>
 
