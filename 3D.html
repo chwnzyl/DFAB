@@ -30,7 +30,64 @@
             <p>One of the major disadvantages of using 3D printing is the slow and tedious process, plus it will be very expensive for large-scale production. Another disadvantage is that 3D print parts do not have the strength, heat resistance (since the material has low melting point) and surface finish for final parts. Tiny pores in the wall surfaces are resulted from 3D printing, which allows easy contamination.</p>
             <p>There are also many constraints of 3D printing, which will be covered later on.</p>
             <h2>Principles of 3D Printing</h2>
-            <p>FFF/FDM (Fused Filament Fabrication / Fused Deposition Modelling) is the most common method used in 3D printing. (Other methods include LCD 3D printing, Stereolithography Apparatus and  Selective laser sintering). It melts and deposits layers of materials on the print bed, then these layers fuse together in a pattern to create an object. The material is usually melted just past its glass transition temperature, and then extruded in a pattern next to or on top of previous extrusions, creating an object layer by layer.</p>
+            <p><img src="image/3D/how-it-works.jpg" width="100%"></p>
+            <p>Fused Deposition Modelling (FDM) is the most common method used in 3D printing. (Other methods include Stereolithography, Selective Laser Sintering and Digital Light Processing). It melts and deposits layers of materials on the print bed, then these layers fuse together in a pattern to create an object. The material is usually melted just past its glass transition temperature, and then extruded in a pattern next to or on top of previous extrusions, creating an object layer by layer. The print head and/or print bed will move to the correct X/Y/Z position for placing the material. </p>
+            <h3>Workflow</h3>
+            <img src="image/3D/workflow.png" width="100%">
+            <ol>
+                <li>Design a 3D model using CAD software (Fusion 360)</li>
+                <li>Converting it into .STL (Standard Tessellation Language) file which is a representation of 3D objects.</li>
+                <li>Using a Slicing software (Cura) to convert .stl files into layers for printing. At this step, we can also adjust the settings to our preference.</li>
+                <li>These sliced layers are then saved as .gcode which gives instructions to control the printer. </li>
+                <li>The 3D printer (Ultimaker 2+) reads the .gcode file and prints the object.</li>
+            </ol>
+            <h3>3D Printers</h3>
+            <p>These are the 3D printers we can find in SP and the recommended Cura settings:</p>
+            <p><img src="image/3D/SP-printers.png" width="90%"> <img src="image/3D/Ultimaker2.png" width="40%"> <img src="image/3D/Cura.png" width="50%"></p>
+            <p>Types of filament: PLA, TPU, ABS, PETG. SP uses <b>PLA (Polylactic Acid)</b> as it is made from plants rich in starch - thus being 100% biodegradable - and it can work with low temperature (Printing: 190 - 210&deg;C, Softening: 60&deg;C). Advantages of using PLA include environmentally-friendly, painting with Acrylic paints, less particle emission and allowing sharper details. The disadvantages are easily deformed under heat and getting brittle over time due to moisture.</p> 
+            <h3>Factors to consider / Constraints</h3>
+            <p>Ventilation: The printer can get heated up easily and fire may break out.</p>
+            <p>Failure: We need to periodically monitor the process as failures can occur, which may result in a lump of mess.</p>
+            <p>Time: Depending on the size of product, the printing process can be from few minutes to hours. Hence, we should plan when we are going to the lab.</p>
+            <table border=black style="border-collapse: collapse">
+                <caption><i>Parameters that affect the print</i></caption>
+                <tr>
+                    <td><img src="image/3D/layer-height.png" width="100%"></td>
+                    <td>Layer height: Thickness of each sliced layer. Fine prints take a longer time to print. This is important especially for curved surfaces, so that the surface will be printed out smoother.</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/wall-thickness.png" width="100%"></td>
+                    <td>Wall thickness: The thinner the wall, the easier it is for the wall to collapse. This is due to the area of contact between each layer.</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/overhang.png" width="100%"></td>
+                    <td>Overhang/Angle: There is a certain angle to which the overhang part can be left hanging without collapsing. A support is needed of the angle exceeds a certain value (usually 45&deg;).</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/clearance.png" width="100%"></td>
+                    <td>Clearance: Take hex nut and bolt for example. When clearance is too small, the nut may not be able to rotate. When clearance is too large, the nut will then rotate loosely and wobbly. A good clearance will allow the nut to rotate about the bolt with stability.</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/bridging.png" width="100%"></td>
+                    <td>Bridging: The distance between the pillars on which the bridging region is should not exceed a certain length (usually 20mm), so that the region will not sag. Otherwise, a support is needed.</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/anisotropy.png" width="100%"></td>
+                    <td>Anisotropy: A horizontal piece and a vertical piece are printed with the same thickness. When we attempt to break both pieces, the vertical piece is easier to break than the horizontal one. </td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/infill.png" width="100%"></td>
+                    <td>Infill: In order to save time and material, the solid sections of the object are printed with a infill pattern. Usually we use an infill of 15-30%. We should avoid using more than 50% unless the space in between the walls needs to be solid.</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/bed-adhesion.png" width="100%"></td>
+                    <td>Bed ahesion: allow the first layers of a 3D print adhere to the surface and provide build support. <b>Rafts</b> are primarily used to help stabilize models with small footprints, or to create a strong foundation on which to build the upper layers of your part. <b>Brims</b> hold down the edges of your part, which can prevent warping. <b>Skirts</b> help prime your extruder and establish a smooth flow of filament.</td>
+                </tr>
+                <tr>
+                    <td><img src="image/3D/support.png" width="100%"></td>
+                    <td>A good 3D printer can usually handle an overhang angle of 50 deg before it fails. Hence, in order to have good overhanging prints, we need supports. <br>Supports can be easily removed after printing.</td>
+                </tr>                
+            </table>
             
             <p><i>Source: FABLAB@SP (Blackboard)</i></p>
         </div>
