@@ -87,9 +87,37 @@
                     <td><img src="image/3D/support.png" width="100%"></td>
                     <td>A good 3D printer can usually handle an overhang angle of 50 deg before it fails. Hence, in order to have good overhanging prints, we need supports. <br>Supports can be easily removed after printing.</td>
                 </tr>                
-            </table>
-            
+            </table>            
             <p><i>Source: FABLAB@SP (Blackboard)</i></p>
+            
+            <h2>Assignment</h2>
+            <p><u>Test the features of 3D printer</u> (Group Project)</p>
+            <p>The class is split into groups of 4, and each member has to design a model to test a characteristic of the 3D printer. </p>
+            <ul>(Click on these links to take a look at my group members' documentation of their tests)
+                <li>Bryan - <a href="https://bryanpotato.github.io/Digital_Fabrication_Prototype_fundamentals/project_management.html">Bridging</a></li>
+                <li>E Chen - <a href="https://echenleow.github.io/fablab/3Dprint.html">Overhang</a></li>
+                <li>Zhan Li - <a href="https://v00zhanli.github.io/digitalfablab/3dprint.html">Clearance</a></li>
+            </ul>
+            <p>I did infill test. First step is to design a few structures for the different infill percentage. I extrduded a cylinder of &#8960;20mm &times; 20mm, then replicate three more using Rectangular Pattern.</p>
+            <p>(Click on the images to see a clearer image)</p>
+            <p><a href="image/3D/test-infill-1.png"><img src="image/3D/test-infill-1.png" width="100%"></a></p>
+            <p>To indicate the different infill percentages on each cylinder, I embossed the numbers on the side wall. The top layer is going to be removed when slicing, so I didn't extrude from the top. I also created a base in case I need to keep, but I decided not to print it.</p>
+            <p><a href="image/3D/test-infill-2.png"><img src="image/3D/test-infill-2.png" width="100%"></a> <a href="image/3D/test-infill-3.png"><img src="image/3D/test-infill-3.png" width="100%"></a> </p>
+            <p>I'm now done with designing. What's next? Right-click on a body, go to Make > 3D Print. Click OK, and this 3D object will be saved as STL file. Repeat for the remaining bodies. Then launch Ultimaker Cura and import all of them (except the base).</p>
+            <p><a href="image/3D/test-infill-4.png"><img src="image/3D/test-infill-4.png" width="100%"></a> <a href="image/3D/test-infill-5.png"><img src="image/3D/test-infill-5.png" width="100%"></a> </p>
+            <p>Insert the SD card form 3D printer, then select "Save to Removable Disk". Now I can print it. But hey, after about 10 minutes into printing, I realised I can already see the infill lines, so instead of waiting another an hour, I decided to abort. I also realised I forgot to set Wall Count of Top Layer to 0, so even if the print is allowed to complete, I won't be able to see the infill. That aside, I am grateful for the Brim Build Plate Adhesion which I didn't remove, turns out I do have to collect 4 disks like that, instead I can just pull out everything in one piece. (See final print below!) </p>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/6y-Fd0js74w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="image/3D/test-infill.jpg" width="90%">
+            <p>One takeaway is, the higher the infill percentage, the longer the printing process. So we should always try to use around 20% infill for our objects, possible.
+            
+            <p><u>Design an object that is uniquely for 3D printing</u> (Individual)</p>
+            <p>For individual component, I am required to design and 3D print an object that could not be made subtractively. The design I made is a sphere within a wired-frame cube.</p>
+            <iframe src="3D%20Assignment.pdf" width="100%" height="500px"></iframe>
+            <iframe src="https://ichat835.autodesk360.com/shares/public/SH56a43QTfd62c1cd968ac3f9ddd465901c1?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            <p>When I load my object into Cura, I see red parts when i orbit to the bottom. These are overhangs, usually when the angle exceeds 50%. If I proceed to print without support, at least the first few layers of overhang will collapse, making the whole print fail/look ugly. I can see how each layer is printed by slicing first, click 'Preview', and drag the slider on the right. </p>
+            <p>To solve this issue, I added a support 'for everwhere', since 'from build plate' does not give support for the 90&deg; frame at the top. Finally, I set the recommended settings in Cura then Slice.</p>
+            <p><a href="image/3D/assignment.png"><img src="image/3D/assignment.png" width="100%"></a></p>
+            
         </div>
     </body>
     <footer>Cheryl Ng &copy; 2020</footer>
