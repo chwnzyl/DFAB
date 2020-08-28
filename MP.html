@@ -10,10 +10,10 @@
             <li><a href="FS.html">Fablab Safety</a></li>
             <li><a href="WD.html">Web Development</a></li>
             <li><a href="CAD.html">Computer Aided Design</a></li>
-            <li><a href="EP.html">Embedded Programming</a></li>
             <li><a href="CCC.html">Computer Controlled Cutting</a></li>
             <li><a href="3D.html">3D Printing</a></li>
-            <li><a href="MP.html">Module Project</a></li>                
+            <li><a href="EP.html">Embedded Programming</a></li>
+            <li><a href="MP.html">Module Project</a></li>
         </nav>
         <div class="Header">
             <h1>Module Project: SAVEnding</h1>
@@ -37,21 +37,65 @@
             </p>
             
             <h2>Bill of Materials</h2>
-            <ul>
-                <li>1 x Arduino Board</li>
-                <li>1 x LCD</li>
-                <li>2 x Continuous Servo Motor &#129062; <b>Get from SP</b></li>
-                <li>1 x Proximity Sensor &#129062; <b>Got from SP</b></li>
-                <li>4 Push Buttons &#129062; <b>Get 2 more from SP/friends</b></li>
-                <li>Wires (type: tbc)</li>
-                <li>4mm Plywood (1x A1, 1x A2)</li>
-                <li>2mm Acrylic (162mm x 172mm)</li>
-                <li>Thick Metal wire &#129062; <i>Got for $1.30</i></li>
-            </ul>
+            <table width="90%" border="black">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Source</th>
+                </tr>
+                <tr>
+                    <td>Arduino  Board</td>
+                    <td>1</td>
+                    <td>Found in kit</td>
+                </tr>
+                <tr>
+                    <td>LCD I2C</td>
+                    <td>1</td>
+                    <td>Found in kit</td>
+                </tr>
+                <tr>
+                    <td>Breadboard</td>
+                    <td>1</td>
+                    <td>Found in kit</td>
+                </tr>
+                <tr>
+                    <td>PCB mounted Push Buttons</td>
+                    <td>4</td>
+                    <td>2 in kit, Got 2 from Mr Chew</td>
+                </tr>
+                <tr>
+                    <td>IR obstacle avoidance sensor</td>
+                    <td>1</td>
+                    <td>Got from Mr Chew</td>
+                </tr>
+                <tr>
+                    <td>Continuous Servo Motor</td>
+                    <td>2</td>
+                    <td>Got from Mr Dorville</td>
+                </tr>
+                <tr>
+                    <td>Thick metal wire</td>
+                    <td>Sufficient</td>
+                    <td>$1.50, bought from hardware shop</td>
+                </tr>
+                <tr>
+                    <td>Plywood</td>
+                    <td>2 pieces of size A1</td>
+                    <td>FABLAB</td>
+                </tr>
+                <tr>
+                    <td>Dupont wires</td>
+                    <td>Sufficient: Male-to-male, Male-to-female</td>
+                    <td>Some from kit and some from Mr Louis</td>
+                </tr>
+                
+            </table>
             
-            <h2>Design using Fusion 360</h2>
+            <h2>Stage I: Design using Fusion 360</h2>
             <h3>Step-by-step process</h3>
-            <p>(updates will be here later)</p>
+            <iframe src="MP_Structure.pdf" width="100%" height="500px"></iframe>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/T_FinuGQnGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://ichat835.autodesk360.com/shares/public/SH56a43QTfd62c1cd968032a6a39c300f982?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             
             <h3>Troubleshooting</h3>
             <p>I set my ‘thickness’ parameter to be 5mm and after I was advised to use 4mm plywood, I changed the thickness to 4mm. But many problems arouse, such as missing parts, cutting problems, incomplete cuts. (see image below) </p>
@@ -63,13 +107,28 @@
                     <li>There was another problem that caused the front wall to be partially cut. It is after I clicked to edit a sketch at the front that I realised the wall thickness was set of ‘5mm’ instead of ‘Thickness’. </li>
                 </ol>
             <p>So after making some adjustments, the problem is finally solved and I am able to cut 4mm plywood!</p>
+            <p><i>---UPDATE: there is only 3mm or 5mm plywood to choose from :( so I wasted half a day on making changes to the design and re-aligning my DXF files.---</i></p>
             
-            <h2>LASER CUT</h2>
+            <h2>Stage II: LASER CUT</h2>
             <h3>Saving sketches as DXF files</h3>
             <p>The design done in Fusion 360 will be sent for laser cutting on 4mm plywood. Because at the start I did not draw each piece within 1 sketch, I will have to create new sketches to save them as DXF files. First, I click on the front face, then create sketch, and pressed ‘P’ to project. The projected sketch is exactly what I would use for vector cutting. I renamed the sketch to ‘front’. I repeated these steps for all unique pieces. Next, I right-clicked on the sketch, and select ‘Save as DXF’. Now my DXF files are ready for vector cutting.</p>
+            <p><a href="image/Project/DXF.png"><img src="image/Project/DXF.png" width="100%"></a></p>
             
             <h3>Aligning &amp; Troubleshooting</h3>
             <p>But wait. Before I cut, I must first align the pieces to reduce wood wastage. A huge mistake lies in the dimensions of my pieces. Even if I use A1 plywood, the maximum number of large pieces I can fit is only 2. If I were to print all 6 sides of SAVEnding together with the remaining smaller pieces, it will leave a lot of unused wood. So I had to scale down on one parameter, which is the width. When I reduce it from 30 to 28cm, there are no errors (yay!), the only problem is the space for the servo motors at the back. It’s ok, I shortened a supporting plate and the divider too and problem resolved!</p>
+            <p>But when I stepped into Fablab, Mr Chan told me that the thickness of the plywood is only 3mm and 5mm. Furthermore, the work area is 800mm &times; 600mm, so I just sat in Fablab for hours just to change some parameters and redesigning some plates. Redesigning because I spotted the mistake I made while designing the divider (see above). The final layout is shown below.</p>
+            <p><img src="image/Project/Layout-1.svg" width="55%" style="background: white"> <img src="image/Project/Layout-2.svg" width="44%" style="background: white"></p>
+            <h3>It's Cut o'clock!</h3>
+            <p>I saved these as DXF and send it to CorelDraw to laser cut. First, I made sure the line weight is Hairline and the colour is RGB (255, 0, 0). Then I go over to preferences and adjust the settings. However, the cutting took a few times to cut through, as I increased the power and decrease the speed (might be due to dirty lens). Here's a video of the cutting process:</p>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/DongGk4gjTA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2>Stage III: 3D Print</h2>
+            <p>Initially I wanted to mount the 4 push button switches onto stripboard, then design and 3D print 4 buttons that sit loosely on the holes cut on the front piece. However, I figured it may be difficult to assemble as I need to find a way to secure/mount the stripboard onto the back of the front piece, along the process the buttons may keep falling out. After discussing with Mr Chew, I decided to print a holder that allows the switches to sit in perfectly, and the convenience of keeping them in place for soldering.</p>
+            <p>I designed a flat surface that serves as a bed for all the small holders. Each holder is made up of a cylinder of &#8960;10mm &times; 5mm (that’s the thickness of plywood it has to pass through), a negatively extruded cuboid of 6mm &times; 6mm &times; 4mm (those are the dimensions of the switches), and 2 little holes for the wires.</p>
+            <p><img src="image/Project/holder_design.png" width="100%"></p>
+            <p>However, I forgot to consider about the tolerance and went ahead to print. The switches cannot fit at all so this print had gone to waste. Mr Yeo tried to help by melting the holder and forcing the switch to fit, but I remembered that the deformed cylinder might mean not being able to fit the plywood. Hence, I had to test print different lengths of the square, i.e. 6.10mm, 6.15mm, 6.20mm, followed by another test of 6.30mm, 6.40mm. (Instead of the whole thing, I printed out just 1 mini holder. The switch can finally fit perfectly in for 6.4mm. </p>
+            <p><a href="image/Project/3D_holder.jpg"><img src="image/Project/3D_holder.jpg" width="45%"></a> <a href="image/Project/failed_holder.jpg"><img src="image/Project/failed_holder.jpg" width="54%"></a></p>
+            <h3>Stage IV: Circuit Planning</h3>
+            <p></p>
             
         </div>
         <div class="Content">    
