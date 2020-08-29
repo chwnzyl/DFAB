@@ -17,6 +17,8 @@
         </nav>
         <div class="Header">
             <h1>Module Project: SAVEnding</h1>
+        </div>
+        <div class="Content">
             <h2>Background</h2>
             <p>Since young I have always wanted to build a machine that “eats up” money and “spits out” candies or biscuits. Something like a vending machine, but without electricity. I thought of making the whole thing entirely out of recyclables such as cardboard and skewers, however it is not as easy as it seems. Due to the lack of resources (strong glue, nails, workspace) and time, I could not build one. Now that I have the opportunity to craft something as the Final Project in DFAB, I am going to work on it, adding on with the application of Arduino.</p>
             
@@ -64,12 +66,12 @@
                     <td>2 in kit, Got 2 from Mr Chew</td>
                 </tr>
                 <tr>
-                    <td>IR obstacle avoidance sensor</td>
+                    <td>IR Obstacle Avoidance Sensor</td>
                     <td>1</td>
                     <td>Got from Mr Chew</td>
                 </tr>
                 <tr>
-                    <td>Continuous Servo Motor</td>
+                    <td>Continuous Rotation Servo Motor</td>
                     <td>2</td>
                     <td>Got from Mr Dorville</td>
                 </tr>
@@ -91,7 +93,7 @@
                 
             </table>
             
-            <h2>Stage I: Design using Fusion 360</h2>
+            <h2>Stage I: Computer Aided Design</h2>
             <h3>Step-by-step process</h3>
             <iframe src="MP_Structure.pdf" width="100%" height="500px"></iframe>
             <iframe width="720" height="405" src="https://www.youtube.com/embed/T_FinuGQnGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -125,13 +127,22 @@
             <p>Initially I wanted to mount the 4 push button switches onto stripboard, then design and 3D print 4 buttons that sit loosely on the holes cut on the front piece. However, I figured it may be difficult to assemble as I need to find a way to secure/mount the stripboard onto the back of the front piece, along the process the buttons may keep falling out. After discussing with Mr Chew, I decided to print a holder that allows the switches to sit in perfectly, and the convenience of keeping them in place for soldering.</p>
             <p>I designed a flat surface that serves as a bed for all the small holders. Each holder is made up of a cylinder of &#8960;10mm &times; 5mm (that’s the thickness of plywood it has to pass through), a negatively extruded cuboid of 6mm &times; 6mm &times; 4mm (those are the dimensions of the switches), and 2 little holes for the wires.</p>
             <p><img src="image/Project/holder_design.png" width="100%"></p>
-            <p>However, I forgot to consider about the tolerance and went ahead to print. The switches cannot fit at all so this print had gone to waste. Mr Yeo tried to help by melting the holder and forcing the switch to fit, but I remembered that the deformed cylinder might mean not being able to fit the plywood. Hence, I had to test print different lengths of the square, i.e. 6.10mm, 6.15mm, 6.20mm, followed by another test of 6.30mm, 6.40mm. (Instead of the whole thing, I printed out just 1 mini holder. The switch can finally fit perfectly in for 6.4mm. </p>
+            <p>However, I forgot to consider about the tolerance and went ahead to print. The switches cannot fit at all so this print had gone to waste. Mr Yeo tried to help by melting the holder and forcing the switch to fit (picture on the right), but I remembered that the deformed cylinder might mean not being able to fit the plywood. Hence, I had to test print different lengths of the square, i.e. 6.10mm, 6.15mm, 6.20mm, followed by another test of 6.30mm, 6.40mm. Instead of the whole thing, I printed out just 1 mini holder. The switch can finally fit perfectly in for 6.4mm. </p>
             <p><a href="image/Project/3D_holder.jpg"><img src="image/Project/3D_holder.jpg" width="45%"></a> <a href="image/Project/failed_holder.jpg"><img src="image/Project/failed_holder.jpg" width="54%"></a></p>
-            <h3>Stage IV: Circuit Planning</h3>
-            <p></p>
-            
-        </div>
-        <div class="Content">    
+            <h2>Stage IV: Embedded Programming</h2>
+            <h3>Circuit Planning</h3>
+            <p>With reference to the circuit schematic from <a href="https://howtomechatronics.com/projects/diy-vending-machine-arduino-based-mechatronics-project/">How To Mechatronics</a>, I removed all the components related to the rail system and took away 2 continuous servo motors to save some assembling time. Before I designed my own schematic diagram using Tinkercad I did a sketch to have an idea of how many connections do I need (credits to Mr Chew for helping me out). Tinkercad does not have LCD I2C, so I will treat the last 2 connection points as SDA and SCL of I2C.</p>
+            <p><img src="image/Project/circuit_sketch.jpg" width="80%"> <img src="image/Project/schematic.png" width="100%" style="background: white"></p>
+            <h3>Writing the Program</h3>
+            <p>I copied the code from How To Mechatronics and removed all the codes related to the rail system. That saves me about a hundred lines. Since I am using an LCD I2C, which uses almost the same code as LCD, I downloaded the library from <a href="https://www.arduinolibraries.info/libraries/liquid-crystal-i2-c">here</a> and replaced it with the original LCD library. After I am completed with the final assembly, I made some changes to the code for servo motors [<code>write()</code>] and redefine the pins connected to each component [<code>#define</code>].</p>
+            <iframe src=https://create.arduino.cc/editor/chwnzyl/12bf85de-5531-454a-ba6c-98911515cc04/preview?embed style="height:630px;width:100%;margin:10px 0" frameborder=0></iframe>
+            <h3>Testing the Circuit</h3>
+            <p>I connected all my components onto my Arduino Board and tested the circuit. There were many mistakes made. I managed to resolve these issues after a good 3 hours of troubleshooting, with the help from Khairin, Mr Dorville and Mr Louis. </p>
+            <p><b>What happened?</b> When I uploaded my sketch, the LCD was blinking rapidly at “Insert a coin!”.  Then I added in the <code>breaks</code> to each <code>switch (var) {case}</code> and uploaded again. However, nothing happened when I clicked on all 4 buttons. Mr Louis pointed out that the VCC and GND of the servo motors are connected to the wrong side of the breadboard. When I finally wired everything correctly, one of the servo motors did not work. I did not conduct checks to ensure all components are functional, thus I had to find a code to test the servo motors.</p>
+            <p><img src="image/Project/circuit_mistakes.jpg" width="100%"></p>
+            <p>First, I picked the sample sketch from Arduino IDE to perform a simple sweep for one of the servo motors. I define the digital pin that is connected to it, then upload the code. That motor spun, so it is functional, and the wires do not have problem. I unplugged the motor from the dupont wires (connected to breadboard) replaced it with the other motor. It did not spin, so I took it out and adjusted the wires, but it still did not work. That was how I determined that motor is <b>faulty</b>.</p>
+            <p>I got a new servo motor, a functional one, and tried the circuit again. It works! I forgot to film a video of how the circuit works, but here are some pictures of the process. (Click to zoom in)</p>
+            <p><a href="image/Project/testing_circuit.jpg"><img src="image/Project/testing_circuit.jpg" width="59%"></a> <a href="image/Project/dry-run.jpg"><img src="image/Project/dry-run.jpg" width="40%"></a></p>
             
         </div>
     </body>
