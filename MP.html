@@ -17,13 +17,17 @@
         </nav>
         <div class="Header">
             <h1>Module Project: SAVEnding</h1>
+            
+            <iframe width="840" height="472.5" src="https://www.youtube.com/embed/hrscSI77lYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>(Please view this video at 1080p resolution.)
+            <p><img src="presentation.png" width="100%"></p>
         </div>
         <div class="Content">
             <h2>Background</h2>
             <p>Since young I have always wanted to build a machine that “eats up” money and “spits out” candies or biscuits. Something like a vending machine, but without electricity. I thought of making the whole thing entirely out of recyclables such as cardboard and skewers, however it is not as easy as it seems. Due to the lack of resources (strong glue, nails, workspace) and time, I could not build one. Now that I have the opportunity to craft something as the Final Project in DFAB, I am going to work on it, adding on with the application of Arduino.</p>
             
             <h2>Project Idea</h2>
-            <p><i><b>Name:</b> SAVEnding</i></p>
+            <p><i><b>Name:</b> SAVEnding</i> (Pronounce as SAVE-vending)</p>
             <p><i><b>Object:</b> A vending machine with embedded programming using Arduino</i></p>
             <p><i><b>Function:</b> Dispense items upon inserting coin and pushing one button</i></p>
             <p><i><b>Purpose:</b> To encourage a habit of saving since young, especially if the person tends to overspend</i></p>
@@ -95,6 +99,7 @@
             
             <h2>Stage I: Computer Aided Design</h2>
             <h3>Step-by-step process</h3>
+            <p>File: <a href="image/Project/SAVEnding_CAD.f3d">SAVEnding_Design.f3d</a></p>
             <iframe src="MP_Structure.pdf" width="100%" height="500px"></iframe>
             <iframe width="720" height="405" src="https://www.youtube.com/embed/T_FinuGQnGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe src="https://ichat835.autodesk360.com/shares/public/SH56a43QTfd62c1cd968032a6a39c300f982?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
@@ -143,7 +148,58 @@
             <p>First, I picked the sample sketch from Arduino IDE to perform a simple sweep for one of the servo motors. I define the digital pin that is connected to it, then upload the code. That motor spun, so it is functional, and the wires do not have problem. I unplugged the motor from the dupont wires (connected to breadboard) replaced it with the other motor. It did not spin, so I took it out and adjusted the wires, but it still did not work. That was how I determined that motor is <b>faulty</b>.</p>
             <p>I got a new servo motor, a functional one, and tried the circuit again. It works! I forgot to film a video of how the circuit works, but here are some pictures of the process. (Click to zoom in)</p>
             <p><a href="image/Project/testing_circuit.jpg"><img src="image/Project/testing_circuit.jpg" width="59%"></a> <a href="image/Project/dry-run.jpg"><img src="image/Project/dry-run.jpg" width="40%"></a></p>
+            <h2>Stage V: First Assembly</h2>
+            <p>I tried putting all the pieces together but just as I reached the last piece (front), it could not fit! Turns out that the orientation of the internal plates is upside-down, causing the rest to fit in the wrong orientation as well. And because back when I designed the structure, I did not follow what was taught, all the pieces are asymmetrical. Therefore, I had to refer to Fusion 360 to match the orientation.</p>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/GYST2ATt-AY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2>Stage VI: Miscellaneous – More laser cutting</h2>
+            <h3>Engraving</h3>
+            <p>The top of the structure looks bare, so I thought “why not give it a nice touch?” I took the DXF file of top piece, launched CorelDraw in T1442, and placed the word “SAVEnding” in the centre. I set the the text to RGB Green and selected the text for raster engraving. The result is awesome!</p>
+            <p><img src="image/Project/engraving.jpg" width="60%"></p>
+            <h3>Coin Guide</h3>
+            <p>1 problem that surfaced while using the IR Obstacle Avoidance Sensor is: The coin will go undetected because the free fall of that metal object is too fast to be detected. I drew up a sketch of a <b>coin guide</b>, then used Fusion 360 to design the 3D structure. As this coin guide is quite tall/long (about 16cm), it will take too long to 3D print, hence I did laser cutting on upcycled acrylic pieces. </p>
+            <p></p>
+            <p><a href="image/Project/coin-guide_sketch.jpg"><img src="image/Project/coin-guide_sketch.jpg" width="100%"></a> <a href="image/Project/coin-guide_CAD.png"><img src="image/Project/coin-guide_CAD.png" width="100%"></a></p>
+            <p>I set the settings wrongly and the acrylic (red) was not cut through after 2 times. I tried to break along the lines but spoiled it instead. Then I took another acrylic (transparent) and cut again with the correct settings. The problem lies in taking the acrylic of wrong thickness, which caused the coin to get stuck. The red acrylic is 2.5mm but I needed 3mm. Separating 2 pieces of acrylic held together by chloroform may destroy them, plus the laser cutter was in use, so I took a thin acrylic scrap (white) and stacked on top of the red acrylic and secured all the pieces together using chloroform.</p>
+            <a href="image/Project/coin-guide_3D.f3d">Coin_Guide.f3d</a> <br>
+            <img src="image/Project/coin-guide.jpg" width="50%"> <iframe src="https://ichat835.autodesk360.com/shares/public/SH56a43QTfd62c1cd968c0a27560f0f4765d?mode=embed" width="49%" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            <h2>Stage VII: Final assembly</h2>
+            <p>Due to time constraint and the lack of experience, I asked Mr Louis to help me with the soldering of the wires connecting to the push button switches. I hot-glued some pieces together and brought SAVEnding home to assemble the motors, sensor and the wires. Before I begin the assembly, I drew out the layout design of how the wiring connnections should look like. </p>
+            <p><a href="image/Project/final-layout.jpg"><img src="image/Project/final-layout.jpg" width="100%"></a></p>
+            <p><a href="image/Project/solder.jpg"><img src="image/Project/solder.jpg" width="28%"></a> <a href="image/Project/coiling.jpg"><img src="image/Project/coiling.jpg" width="35%"></a> <a href="image/Project/coil_attach.jpg"><img src="image/Project/coil_attach.jpg" width="35%"></a></p>
+            <ol>
+                <li>I used dupont wires to extend the connections from all the components to the breadboard and Arduino.</li>
+                <li>I secured the servo motors onto the holder using the given screws and my mini screwdriver.</li>
+                <li>I made 2 helical coils using the thick wire bought from a nearby hardware shop and a kitchen towel roll. However, I did not have hot glue or strong tape to attach the coil to the wing of servo motor, so I made do temporarily with threads and tape. </li>
+                <li>I secured the LCD using an electrical tape and fitted in my 3D-printed button holder onto the back of the front piece.</li> 
+                <li>Positioning the IR Obstacle Avoidance Sensor is challenging as I ponder whether to secure it on an elevated platform on the base or front piece. Taking the distance and the limited resources I have into consideration, I stuck some leftover acrylic scraps and the failed 3D print (button holder) onto the back of the front piece.
+                <li>Plugged back in the wires that I took out the previous day to finish connecting all components to the Arduino Board.</li>
+                <li>Connected the Arduino to my laptop and tested out. Dropped a coin down the coin guide and adjusted the potentiometer behind the sensor accordingly.</li> 
+                <li>Then the problem came; there is no response when I clicked on the buttons. Tested the servo motors using the example sketch and they are working. Could not figure out what was wrong, so I had to bring it to school to finish the assembly. Turns out the dupont wires are loose and are not totally secured in the Breadboard. (Main culprit is not keeping the wires neat.) </li>
+                <li>Glued the rest of the pieces together except the front one. Also secured the Arduino Board and the sensor using hot glue. </li>
+                <li>I rewrote the code for servo motor to change the speed/duration and uploaded again. All set and ready to present!</li>
+            </ol>
+            <p>(ensure the resolution is 1080p.)</p>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/G8VsIg9mqOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
+            <h2>Stage VIII: Presentation</h2>
+            <p>I finished assembling every part and made the last changes to the code on my presentation day. It's time to test it out! At the start, everything is working well, however after my friends used it multiple times, I noticed the LCD will turn off for a brief moment when the servo motor is rotating. Could it be the current or voltage passing through the LCD is reduced?</p>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/rQnbKZAD7mQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <div class="extra">
+                <p><b><u>Possible Developments in the Future</u></b></p>
+                <p>These are some improvements I can make to SAVEnding. Due to shortage of time, I am only able to create a functional machine that detects coins and dispense items.</p>
+                <ul>
+                    <li>Changing the angle of the coin guide (middle layer) by about 5&deg; – so that it will roll off on its own without tilting the structure</li>
+                    <li>Extend the length of wires by soldering instead of using dupont wires and replacing the breadboard with a stripboard. I also need to secure the wires along the walls of the structure, to keep them neat and presentable.</li>
+                    <li>Installing a window panel and push cover at the front</li>
+                    <li>Placing a coin box, possibly enclosed with a lock, at the end of coin guide to store the coins</li>
+                    <li>Adding 2 more servo motors – I have left 2 dispensing slots in the structure and 2 pins of the Arduino empty. All 4 switches are there, I can just re-program anytime.</li>
+                    <li>Detection of different coins – separating them by sizes</li>
+                    <li>Write a code that rotates the servo motors in the opposite direction when repeatedly clicking on one of the buttons – this will make replenishing the items more convenient as the room for the hand and items is insufficient.</li>
+                </ul>
+            </div>
+            <h2 style="text-align: center">---------- END OF MY DFAB JOURNEY... OR NOT? ----------</h2>
+
         </div>
     </body>
     <footer>Cheryl Ng &copy; 2020</footer>

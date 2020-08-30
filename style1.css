@@ -102,3 +102,11 @@ table {
 }
 
 th, td {padding: 10px}
+
+.extra {
+    background: #283747;
+    padding: 1.5em;
+    font-size: 0.9em;
+    color: white;
+    margin: 5%
+}
